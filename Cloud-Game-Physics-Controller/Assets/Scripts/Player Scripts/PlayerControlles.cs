@@ -1,5 +1,7 @@
 using UnityEngine;
 
+//it make sure rigidbody can't be removed
+[RequireComponent(typeof(Rigidbody))]
 public class PlayerControlles : MonoBehaviour
 {
     #region variables
@@ -11,7 +13,8 @@ public class PlayerControlles : MonoBehaviour
 
     #region componentReference
     //rigidbody component
-    [SerializeField] Rigidbody rb;
+    [SerializeField] Rigidbody PlayerRb;
+    public PlayerInput PlayerInput;
 
     #endregion
 
